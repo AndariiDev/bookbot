@@ -15,5 +15,6 @@ def get_num_chars(text):
     return num_chars
 
 def sorted_report(num_chars):
-    num_chars.sort()
-    print(num_chars)
+    char_counts_list = [{"char": char, "num": count} for char, count in num_chars.items()]
+    sorted_list = sorted(char_counts_list, key=lambda d: d["num"], reverse=True)
+    return sorted_list
