@@ -14,6 +14,7 @@ def main() -> None:
         print(f"Usage: python3 {sys.argv[0]} <path_to_book>")
         sys.exit(1)
     file_path = sys.argv[1]
+    # file_path = "books/frankenstein.txt"
     text = get_book_text(file_path)
     num_words = get_num_words(text)
     num_chars = get_num_chars(text)
@@ -24,7 +25,7 @@ def main() -> None:
     print(f"Analyzing book found at {file_path}")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
-    print("----------- Sorted List ----------")
+    print("---------- Sorted List ----------")
     print(f"{sorted_list}")
     print("--------- Character Count -------")
     for item in sorted_chars:
